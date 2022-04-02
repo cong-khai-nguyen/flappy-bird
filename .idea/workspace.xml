@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5630a128-d571-4609-8ec9-055ada124254" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-    </list>
+    <list default="true" id="5630a128-d571-4609-8ec9-055ada124254" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -124,7 +121,21 @@
       <option name="project" value="LOCAL" />
       <updated>1648844624479</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="file">
+      <created>1648845676394</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1648845676394</updated>
+    </task>
+    <task id="LOCAL-00010" summary="write 'move' method to keep track the bird velocity and acceleration">
+      <created>1648845885218</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1648845885218</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -143,8 +154,9 @@
     <MESSAGE value="python file" />
     <MESSAGE value="images for the game" />
     <MESSAGE value="load images in" />
-    <MESSAGE value="file" />
     <MESSAGE value="set up Bird class" />
-    <option name="LAST_COMMIT_MESSAGE" value="set up Bird class" />
+    <MESSAGE value="file" />
+    <MESSAGE value="write 'move' method to keep track the bird velocity and acceleration" />
+    <option name="LAST_COMMIT_MESSAGE" value="write 'move' method to keep track the bird velocity and acceleration" />
   </component>
 </project>
