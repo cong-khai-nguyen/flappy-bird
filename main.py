@@ -106,7 +106,10 @@ class Pipe:
         self.x -= self.VEL
 
     def draw(self):
-        pass
+        win.blit(self.PIPE_TOP, (self.x, self.top))
+        win.blit(self.PIPE_BOTTOM, (self.x, self.bottom))
+
+
 
 
 
