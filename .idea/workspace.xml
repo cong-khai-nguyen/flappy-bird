@@ -4,7 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5630a128-d571-4609-8ec9-055ada124254" name="Changes" comment="debug draw function from Bird class where the bird images freezing">
+    <list default="true" id="5630a128-d571-4609-8ec9-055ada124254" name="Changes" comment="file">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -223,7 +224,21 @@
       <option name="project" value="LOCAL" />
       <updated>1649096326004</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="debug draw function from Bird class where the bird images freezing">
+      <created>1649097624650</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1649097624650</updated>
+    </task>
+    <task id="LOCAL-00024" summary="file">
+      <created>1649097634459</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1649097634459</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -249,8 +264,8 @@
     <MESSAGE value="'draw' method in 'Pipe' class to draw the pipe to screen" />
     <MESSAGE value="create class 'Base'" />
     <MESSAGE value="test the base and pipe classes" />
-    <MESSAGE value="file" />
     <MESSAGE value="debug draw function from Bird class where the bird images freezing" />
-    <option name="LAST_COMMIT_MESSAGE" value="debug draw function from Bird class where the bird images freezing" />
+    <MESSAGE value="file" />
+    <option name="LAST_COMMIT_MESSAGE" value="file" />
   </component>
 </project>
