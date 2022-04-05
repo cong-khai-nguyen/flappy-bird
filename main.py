@@ -168,8 +168,18 @@ def draw_window(win, bird, pipes, base, score):
     pygame.display.update()
 
 
-def main_loop():
-    bird = Bird(230, 350)
+def main_loop(genomes, config):
+    nets = []
+    ge = []
+    birds = []
+
+    for genome in genomes:
+        network = neat.nn.FeedForwardNetwork(genome, config)
+        nets.append(net)
+        birds.append(Bird(230,350))
+        genome.fitness = 0
+        ge.append(genome)
+
     base = Base(730)
     pipes = [Pipe(600)]
     run = True
@@ -186,24 +196,35 @@ def main_loop():
         rem = []
         add_pipe = False
         for pipe in pipes:
-            if pipe.collide(bird):
-                pass
+            for bird in birds:
+                if pipe.collide(bird):
+                    ge[birds.index(bird)] -= 1
+                    ge.pop(birds.index(bird))
+                    nets.pop(birds.index(bird))
+                    birds.remove(bird)
+
+                if not pipe.passed and pipe.x < bird.x:
+                    pipe.passed = True
+                    add_pipe = True
             if pipe.x + pipe.PIPE_TOP.get_width() < 0:
                 rem.append(pipe)
 
-            if not pipe.passed and pipe.x < bird.x:
-                pipe.passed = True
-                add_pipe = True
             pipe.move()
+
         if add_pipe:
             score += 1
+            for g in ge:
+                g.fitness += 10
             pipes.append(Pipe(600))
 
         for r in rem:
             pipes.remove(r)
 
-        if bird.y + bird.img.get_height() >= 730:
-            pass
+        for bird in birds:
+            if bird.y + bird.img.get_height() >= 730:
+                ge.pop(birds.index(bird))
+                nets.pop(birds.index(bird))
+                birds.remove(bird)
 
         base.move()
         draw_window(win, bird, pipes, base, score)
@@ -220,7 +241,7 @@ def run(config_path):
     p.add_reporter(neat.StdOutReporter(True))
     p.add_reporter(neat.StatisticsReporter())
 
-    winner = p.run(main_loop(), 50)
+    winner = p.run(main_loop, 50)
 
 
 
