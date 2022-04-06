@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5630a128-d571-4609-8ec9-055ada124254" name="Changes" comment="debug the main_loop">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="5630a128-d571-4609-8ec9-055ada124254" name="Changes" comment="file" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -328,7 +326,14 @@
       <option name="project" value="LOCAL" />
       <updated>1649266928521</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="file">
+      <created>1649267726639</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1649267726639</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -360,8 +365,8 @@
     <MESSAGE value="load in NEAT config" />
     <MESSAGE value="setting up networks to control each bird" />
     <MESSAGE value="test and give the control of the bird to neural networks" />
-    <MESSAGE value="file" />
     <MESSAGE value="debug the main_loop" />
-    <option name="LAST_COMMIT_MESSAGE" value="debug the main_loop" />
+    <MESSAGE value="file" />
+    <option name="LAST_COMMIT_MESSAGE" value="file" />
   </component>
 </project>
