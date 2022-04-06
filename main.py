@@ -156,15 +156,15 @@ class Base:
         win.blit(self.IMG, (self.x2, self.y))
 
 
-def draw_window(win, bird, pipes, base, score):
+def draw_window(win, birds, pipes, base, score):
     win.blit(BG_IMG, (0, 0))
     for pipe in pipes:
         pipe.draw(win)
     text = STAT_FONT.render("Score: " + str(score), 1, (255,255,255))
     win.blit(text, (WIN_WIDTH - 10 - text.get_width(), 10))
     base.draw(win)
-
-    bird.draw(win)
+    for bird in birds:
+        bird.draw(win)
     pygame.display.update()
 
 
@@ -173,9 +173,9 @@ def main_loop(genomes, config):
     ge = []
     birds = []
 
-    for genome in genomes:
-        network = neat.nn.FeedForwardNetwork(genome, config)
-        nets.append(net)
+    for _, genome in genomes:
+        network = neat.nn.FeedForwardNetwork.create(genome, config)
+        nets.append(network)
         birds.append(Bird(230,350))
         genome.fitness = 0
         ge.append(genome)
@@ -190,8 +190,27 @@ def main_loop(genomes, config):
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 run = False
-        clock.tick(120)
+                pygame.quit()
+                quit()
+        clock.tick(30)
         # bird.move()
+
+        pipe_ind = 0
+        if len(birds) > 0:
+            if len(pipes) > 1 and birds[0].x > pipes[0].x + pipes[0].PIPE_TOP.get_width():
+                pipe_ind = 1
+        else:
+            run = False
+            break
+        for x, bird in enumerate(birds):
+            bird.move()
+            ge[x].fitness += 0.1
+
+            output = nets[x].activate((bird.y, abs(bird.y-pipes[pipe_ind].height), abs(bird.y - pipes[pipe_ind].bottom)))
+
+            if output[0] > 0.5:
+                bird.jump()
+
 
         rem = []
         add_pipe = False
@@ -221,15 +240,13 @@ def main_loop(genomes, config):
             pipes.remove(r)
 
         for bird in birds:
-            if bird.y + bird.img.get_height() >= 730:
+            if bird.y + bird.img.get_height() >= 730 or bird.y < 0:
                 ge.pop(birds.index(bird))
                 nets.pop(birds.index(bird))
                 birds.remove(bird)
 
         base.move()
-        draw_window(win, bird, pipes, base, score)
-    pygame.quit()
-    quit()
+        draw_window(win, birds, pipes, base, score)
 
 
 
