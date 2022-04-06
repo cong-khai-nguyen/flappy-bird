@@ -215,9 +215,9 @@ def main_loop(genomes, config):
         rem = []
         add_pipe = False
         for pipe in pipes:
-            for bird in birds:
+            for bird in list(birds):
                 if pipe.collide(bird):
-                    ge[birds.index(bird)] -= 1
+                    ge[birds.index(bird)].fitness -= 1
                     ge.pop(birds.index(bird))
                     nets.pop(birds.index(bird))
                     birds.remove(bird)
