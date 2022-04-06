@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5630a128-d571-4609-8ec9-055ada124254" name="Changes" comment="file">
+    <list default="true" id="5630a128-d571-4609-8ec9-055ada124254" name="Changes" comment="debug the main_loop">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -308,7 +307,28 @@
       <option name="project" value="LOCAL" />
       <updated>1649264093342</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="test and give the control of the bird to neural networks">
+      <created>1649266637227</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1649266637227</updated>
+    </task>
+    <task id="LOCAL-00036" summary="file">
+      <created>1649266647204</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1649266647204</updated>
+    </task>
+    <task id="LOCAL-00037" summary="debug the main_loop">
+      <created>1649266928521</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1649266928521</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -339,7 +359,9 @@
     <MESSAGE value="NEAT config" />
     <MESSAGE value="load in NEAT config" />
     <MESSAGE value="setting up networks to control each bird" />
+    <MESSAGE value="test and give the control of the bird to neural networks" />
     <MESSAGE value="file" />
-    <option name="LAST_COMMIT_MESSAGE" value="file" />
+    <MESSAGE value="debug the main_loop" />
+    <option name="LAST_COMMIT_MESSAGE" value="debug the main_loop" />
   </component>
 </project>
